@@ -1,12 +1,10 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-   
 }
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-   
 }
 
 
@@ -27,3 +25,97 @@ textarea {
         padding: 0;
     }
 }
+
+
+
+body {
+    background-color: rgb(248, 248, 248);
+}
+
+    .navbar-brand {
+        font-family: 'Bree Serif', serif;
+        font-size: 25px;
+    }
+
+    .navbar-nav {
+        font-size: 18px;
+}
+
+    .navbar-nav li a {
+        text-decoration: none;
+    }
+
+/* mytemplate css */
+    .mytemplate ,.rightside{
+        /* border-left:2px solid rgb(152, 16, 214); */
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #template-title{
+        display: inline-block;
+        margin: 35px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid green;
+    }
+
+    .template-data p {
+        padding-top: 20px;
+        padding-left: 35px;
+        font-size: 18px;
+    }
+    /*.mytemplate p {
+        padding-top: 20px;
+        padding-left: 35px;
+        font-size: 18px;
+    }*/
+
+/* Right side CSS*/
+
+    .rightside-title {
+        margin: 25px;
+        text-align: left;
+        padding-bottom: 10px;
+        border-bottom: 3px solid blue;
+    }
+
+    .button-group {
+        margin: 25px;
+    }
+
+    .button-group .btn {
+        margin: 5px;
+    }
+
+    /*margin from mytemplate*/
+    #rightside-tag, #rightside-second, #rightside-third {
+        margin-left: 30px;
+    }
+
+/*Post template CSS*/
+
+    .post-template {
+        border-left: 4px solid blue;
+        margin: 50px 0;
+        margin-left: 35px;
+        padding: 25px;
+    }
+
+    .post-title h4 {
+        font-weight: bold;
+        /* border: 2px solid black; */
+    }
+
+    .post-description {
+        margin-top: 20px;
+        /* border:2px solid blue; */
+    }
+
+    .post-description p {
+        /* border:2px solid tomato; */
+        display: inline-block;
+    }
+
+    .post-footer {
+        margin-top: 30px;
+    }

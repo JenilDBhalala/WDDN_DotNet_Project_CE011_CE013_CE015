@@ -14,19 +14,19 @@ namespace BloggingSite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
-            SqlConnection sqlconn = new SqlConnection(mainconn);
-            string sqlquery = "select COUNT(case when Bcategory = 'Food' then 1 end) as Food, COUNT(case when Bcategory = 'Movies' then 1 end) as Movies, COUNT(case when Bcategory = 'Sports' then 1 end) as Sports from [dbo].[blog]";
-            sqlconn.Open();
-            SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
-            SqlDataReader sdr = sqlcomm.ExecuteReader();
-            if (sdr.Read())
-            {
-                LblFood.Text = sdr.GetValue(0).ToString();
-                LblMovies.Text = sdr.GetValue(1).ToString();
-                LblSports.Text = sdr.GetValue(2).ToString();
-            }
-            sqlconn.Close();
+            //string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
+            //SqlConnection sqlconn = new SqlConnection(mainconn);
+            //string sqlquery = "select COUNT(case when Bcategory = 'Food' then 1 end) as Food, COUNT(case when Bcategory = 'Movies' then 1 end) as Movies, COUNT(case when Bcategory = 'Sports' then 1 end) as Sports from [dbo].[blog]";
+            //sqlconn.Open();
+            //SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
+            //SqlDataReader sdr = sqlcomm.ExecuteReader();
+            //if (sdr.Read())
+            //{
+            //    LblFood.Text = sdr.GetValue(0).ToString();
+            //    LblMovies.Text = sdr.GetValue(1).ToString();
+            //    LblSports.Text = sdr.GetValue(2).ToString();
+            //}
+            //sqlconn.Close();
         }
     }
 }
