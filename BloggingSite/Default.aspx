@@ -16,10 +16,9 @@
                                 </div>
                                 <div class="post-description">
                                     <p><%#Eval("Bdesc") %></p>
-                                    &nbsp;&nbsp
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Press">Read Complete Article...</asp:LinkButton>
                                 </div>
-                                <asp:Label ID="LblId" runat="server" Text='<%#Eval("Bid") %>' Visible="false"></asp:Label>
-                                <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Press">Read Complete Article...</asp:LinkButton>
+                                <asp:Label ID="LblId" runat="server" Text='<%#Eval("Burl") %>' Visible="false"></asp:Label>
                                 <div class="post-footer">
                                     <strong>Posted On</strong> : <%#Eval("Bposteddate","{0: MMMM dd yyyy}") %>  
                                 &nbsp;&nbsp;&nbsp;    
@@ -51,6 +50,18 @@
                         <button class="btn btn-secondary">Stock Market</button>
                         <button class="btn btn-secondary">Bollywood</button>
                         <button class="btn btn-secondary">Festival</button>
+                    </div>
+                </div>
+                <div id="most-viewed" class="shadow p-3 mb-5 bg-white rounded">
+                    <h3 class="rightside-title">Most Viewed Article</h3>
+                    <div class="button-group">
+                        <asp:Repeater ID="MostViewdBlog" runat="server">
+                            <ItemTemplate>
+                                <div style="margin: 12px 0;font-size: 20px">
+                                    <asp:HyperLink ID="HyperLink1" NavigateUrl='<%#Eval("Burl")%>' runat="server"><%#Eval("Btitle")%></asp:HyperLink>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
             </div>

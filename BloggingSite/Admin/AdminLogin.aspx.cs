@@ -22,7 +22,7 @@ namespace BloggingSite.Admin
             }
             else
             {
-                Response.Redirect("~/Admin/AdminLogin.aspx");
+                dvMessage.Visible = true;
             }
         }
     }

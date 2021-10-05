@@ -17,8 +17,9 @@ namespace BloggingSite.Admin
         {
             if (!Page.IsPostBack)
             {
-                LblBlogPostedDate.Text = DateTime.Now.ToString();
-                ListBlogCat.Items.Insert(0, "-- Select Category --");
+                //    LblBlogPostedDate.Text = DateTime.Now.ToString();
+                //    ListBlogCat.Items.Insert(0, "-- Select Category --");
+                //
             }
         }
 
@@ -26,7 +27,7 @@ namespace BloggingSite.Admin
         {
             string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
-            string sqlquery = "insert into [dbo].[blog] (Btitle,Bcategory,Bdesc,Bfullblog,Bposteddate) values (@Btitle, @Bcategory, @Bdesc, @Bfullblog, @Bposteddate)";
+            string sqlquery = "insert into [dbo].[blog] (Btitle,Bcategory,Bdesc,Bfullblog,Bposteddate,Burl) values (@Btitle, @Bcategory, @Bdesc, @Bfullblog, @Bposteddate,@url)";
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
             sqlcomm.Parameters.AddWithValue("@Btitle", TxtBlogTitle.Text);
@@ -34,6 +35,7 @@ namespace BloggingSite.Admin
             sqlcomm.Parameters.AddWithValue("@Bdesc", TxtBlogDesc.Text);
             sqlcomm.Parameters.AddWithValue("@Bfullblog", TxtFullBlog.Text);
             sqlcomm.Parameters.AddWithValue("@Bposteddate", DateTime.Parse(LblBlogPostedDate.Text));
+            sqlcomm.Parameters.AddWithValue("@url", URL.Text);
             sqlcomm.ExecuteNonQuery();
             sqlconn.Close();
             Response.Redirect("~/Admin/AdminPanel.aspx");

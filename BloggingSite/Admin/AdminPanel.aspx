@@ -24,6 +24,11 @@
                     <asp:TextBox class="form-control" ID="TxtBlogDesc" runat="server" TextMode="MultiLine" BorderColor="#28a745"></asp:TextBox>
                 </div>
                 <div class="form-group px-5">
+                    <label for="exampleFormControlSelect1">Blog URL : </label>
+                    <asp:TextBox runat="server" Value="www.blogscope.com/" ReadOnly=true></asp:TextBox>&nbsp;
+                    <asp:TextBox ID="URL" style="width:100%;"  runat="server" BorderColor="#28a745" ></asp:TextBox>
+                </div>
+                <div class="form-group px-5">
                     <label for="exampleFormControlTextarea1">Type Your Blog</label>
                     <div class="editor" style="border: 1px solid green">
                         <asp:TextBox class="form-control ckeditor" ID="TxtFullBlog" runat="server" TextMode="MultiLine"></asp:TextBox>

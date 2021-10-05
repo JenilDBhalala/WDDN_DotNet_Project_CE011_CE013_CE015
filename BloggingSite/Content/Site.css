@@ -32,19 +32,29 @@ body {
     background-color: rgb(248, 248, 248);
 }
 
+.navbar {
+    margin-bottom: 20px;
+}
+
 .navbar-brand {
     font-family: 'Bree Serif', serif;
     font-size: 25px;
 }
 
 .navbar-nav {
-    font-size: 16px;
+    font-size: 18px;
 }
 
     .navbar-nav li a {
         text-decoration: none;
     }
 
+/*Admin login title*/
+#login-title {
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 3px solid green;
+}
 /* mytemplate css */
 .mytemplate, .rightside {
     /* border-left:2px solid rgb(152, 16, 214); */
@@ -59,10 +69,10 @@ body {
     border-bottom: 3px solid green;
 }
 
-.template-data p {
+.template-data {
     padding-top: 20px;
     padding-left: 35px;
-    font-size: 15px;
+    font-size: 18px;
 }
 /*.mytemplate p {
         padding-top: 20px;
@@ -88,7 +98,7 @@ body {
     }
 
 /*margin from mytemplate*/
-#rightside-tag, #rightside-second, #rightside-third {
+#rightside-tag, #most-viewed, #rightside-third {
     margin-left: 30px;
 }
 
@@ -96,19 +106,24 @@ body {
 
 .post-template {
     border-left: 4px solid blue;
-    margin: 40px 0;
-    margin-left: 35px;
+    margin: 50px 0;
+    margin: 35px;
     padding: 25px;
 }
 
-.post-title h4 {
-    font-weight: bold;
-    /* border: 2px solid black; */
+.post-title {
+    padding-left: 25px;
+    /*border: 2px solid black;*/
 }
 
+    .post-title h4 {
+        font-weight: bold;
+    }
+
 .post-description {
+    padding-left: 25px;
     margin-top: 20px;
-    /* border:2px solid blue; */
+    /*border:2px solid blue;*/
 }
 
     .post-description p {
@@ -117,5 +132,72 @@ body {
     }
 
 .post-footer {
+    /*border: 2px solid black;*/
+    padding-left: 25px;
     margin-top: 30px;
+}
+/*Comment CSS*/
+.comment-template {
+    border-left: 4px solid blue;
+    padding: 10px;
+}
+
+.comment-username {
+    padding-left: 8px;
+}
+
+    .comment-username h4 {
+        font-weight: bold;
+    }
+
+.comment-data {
+    padding-left: 8px;
+    margin-top: 10px;
+    /* border:2px solid blue; */
+}
+
+    .comment-data h4 {
+        /* border:2px solid tomato; */
+        display: inline-block;
+    }
+
+/* Comment Box CSS */
+#comment-box {
+    display: none;
+    padding: 50px;
+}
+
+.template-footer {
+    /* border: 2px solid black; */
+    margin-left: 35px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: left;
+}
+
+.far, .fas {
+    font-size: 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#like, #comment {
+    display: flex;
+    padding: 20px;
+    padding-left: 0px;
+}
+
+#MainContent_CommentBox, #MainContent_Button3 {
+    margin-left: 57px;
+    margin-top: 4px;
+}
+
+#MainContent_Button4 {
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+#cancel-comment-button {
+    margin-top: 4px;
+    display: inline-block;
 }

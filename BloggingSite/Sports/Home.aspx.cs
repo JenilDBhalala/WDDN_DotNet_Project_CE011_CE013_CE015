@@ -81,8 +81,8 @@ namespace BloggingSite.Sports
         {
             if (e.CommandName == "Press")
             {
-                string Lbl = ((Label)e.Item.FindControl("LblId")).Text;
-                Response.Redirect("Article.aspx?id=" + Lbl);
+                string url = ((Label)e.Item.FindControl("LblId")).Text;
+                Response.Redirect("/" + url);
             }
         }
 

@@ -8,17 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - BlogScope</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
     </style>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-
+    
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script type="text/javascript" src="/Scripts/myscript.js"></script>
     
 </head>
 
@@ -45,12 +47,17 @@
         </asp:ScriptManager>
 
         <%--Navigation Bar--%>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded">
+        <%--navbar navbar-default--%> 
+        <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded">
             <div class="container-fluid">
+
                 <a class="navbar-brand mx-4" runat="server" href="~/">Blog Scope</a>
-        
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav" style="font-family: 'Signika', sans-serif;">
                     <li> <a class="nav-link mx-2" runat="server" aria-current="page" href="~/">Home</a></li>
                     <li> <a class="nav-link mx-2" runat="server" href="~/Food/Home">Food</a></li>
                     <li> <a class="nav-link mx-2" runat="server" href="~/Sports/Home">Sports</a></li>
@@ -59,17 +66,26 @@
                 </div>
             </div>
         </nav>
+        <br />
+        <br />
+        <br />
+        <br />
+        
 
         <%--Here main content will be added--%>
         <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
 
-
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        
         <%--footer--%>
-        <footer">
-            <p class="text-center">&copy; <%: DateTime.Now.Year %> - BlogScope</p>
+        <footer class="fixed-bottom shadow-sm p-3 mt-5 bg-white rounded">
+            <p class="text-center">&copy; <%: DateTime.Now.Year %> - www.blogscope.com</p>
         </footer>
         
     </form>
-
 </body>
 </html>

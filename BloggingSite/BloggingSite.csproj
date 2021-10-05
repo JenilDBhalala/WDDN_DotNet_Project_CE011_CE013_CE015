@@ -140,7 +140,6 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Food\Article.aspx" />
     <Content Include="Food\Home.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -151,7 +150,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Movies\Article.aspx" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor\ckeditor.js" />
     <Content Include="Scripts\ckeditor\config.js" />
@@ -625,6 +623,7 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\myscript.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -648,7 +647,6 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Sports\Home.aspx" />
-    <Content Include="Sports\Article.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -699,13 +697,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Food\Article.aspx.cs">
-      <DependentUpon>Article.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Food\Article.aspx.designer.cs">
-      <DependentUpon>Article.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Food\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -722,13 +713,6 @@
     </Compile>
     <Compile Include="Movies\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Movies\Article.aspx.cs">
-      <DependentUpon>Article.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Movies\Article.aspx.designer.cs">
-      <DependentUpon>Article.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -751,13 +735,6 @@
     </Compile>
     <Compile Include="Sports\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Sports\Article.aspx.cs">
-      <DependentUpon>Article.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Sports\Article.aspx.designer.cs">
-      <DependentUpon>Article.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

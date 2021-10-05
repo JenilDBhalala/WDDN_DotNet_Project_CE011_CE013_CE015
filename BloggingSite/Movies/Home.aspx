@@ -15,10 +15,9 @@
                                 </div>
                                 <div class="post-description">
                                     <p><%#Eval("Bdesc") %></p>
-                                    &nbsp;&nbsp
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Press">Read Complete Article...</asp:LinkButton>
                                 </div>
-                                <asp:Label ID="LblId" runat="server" Text='<%#Eval("Bid") %>' Visible="false"></asp:Label>
-                                <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Press">Read Complete Article...</asp:LinkButton>
+                                    <asp:Label ID="LblId" runat="server" Text='<%#Eval("Burl") %>' Visible="false"></asp:Label>
                                 <div class="post-footer">
                                     <strong>Posted On</strong> : <%#Eval("Bposteddate","{0: MMMM dd yyyy}") %>  
                                 &nbsp;&nbsp;&nbsp;    

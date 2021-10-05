@@ -15,18 +15,27 @@ namespace BloggingSite
 		int totalCount = 0;
 		protected void Page_Load(object sender, EventArgs e)
 		{
+
 			string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
 			SqlConnection sqlconn = new SqlConnection(mainconn);
-			string sqlquery = "select * from [dbo].[blog] order by Bposteddate DESC";
+			
+			string sqlquery1 = "select * from [dbo].[blog] order by Bposteddate DESC";
+			string sqlquery2 = "select TOP 5 * from [dbo].[blog] order by [view] DESC";
 			sqlconn.Open();
-			SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
-			SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
-			DataTable dt = new DataTable();
-			sda.Fill(dt);
-			RepBlogDetails.DataSource = dt;
+			SqlCommand sqlcomm1 = new SqlCommand(sqlquery1, sqlconn);
+			SqlCommand sqlcomm2 = new SqlCommand(sqlquery2, sqlconn);
+			SqlDataAdapter sda1 = new SqlDataAdapter(sqlcomm1);
+			SqlDataAdapter sda2 = new SqlDataAdapter(sqlcomm2);
+			DataTable dt1 = new DataTable();
+			DataTable dt2 = new DataTable();
+			sda1.Fill(dt1);
+			sda2.Fill(dt2);
+			RepBlogDetails.DataSource = dt1;
 			RepBlogDetails.DataBind();
-			totalCount = dt.Rows.Count;
+			totalCount = dt1.Rows.Count;
 			bindData();
+			MostViewdBlog.DataSource = dt2;
+			MostViewdBlog.DataBind();
 			sqlconn.Close();
 		}
 
@@ -80,8 +89,8 @@ namespace BloggingSite
 		{
 			if (e.CommandName == "Press")
 			{
-				string Lbl = ((Label)e.Item.FindControl("LblId")).Text;
-				Response.Redirect("Article.aspx?id=" + Lbl);
+				string url = ((Label)e.Item.FindControl("LblId")).Text;
+				Response.Redirect(url);
 			}
 
 		}

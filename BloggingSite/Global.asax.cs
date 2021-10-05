@@ -16,6 +16,8 @@ namespace BloggingSite
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            RouteTable.Routes.MapPageRoute("AdminLogin", "admin/login", "~/Admin/AdminLogin.aspx");
+            RouteTable.Routes.MapPageRoute("ShowArticle", "{slug}", "~/Article.aspx");
         }
     }
 }
