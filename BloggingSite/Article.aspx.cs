@@ -21,11 +21,8 @@ namespace BloggingSite
             SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
             SqlDataReader reader = sqlcomm.ExecuteReader();
             reader.Read();
-
             Label1.Text = reader["Btitle"].ToString();
-            //Label1.Text = reader["Bfullblog
             Label2.Text = reader["Bfullblog"].ToString();
-            
             sqlconn.Close();
         }
     }

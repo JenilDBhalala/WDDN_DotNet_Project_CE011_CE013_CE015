@@ -53,8 +53,8 @@
                 <ul class="navbar-nav">
                     <li> <a class="nav-link mx-2" runat="server" aria-current="page" href="~/">Home</a></li>
                     <li> <a class="nav-link mx-2" runat="server" href="~/Food/Home">Food</a></li>
-                    <li> <a class="nav-link mx-2" runat="server" href="~/Food/Home">Sports</a></li>
-                    <li> <a class="nav-link mx-2" runat="server" href="~/Food/Home">Movies</a></li>
+                    <li> <a class="nav-link mx-2" runat="server" href="~/Sports/Home">Sports</a></li>
+                    <li> <a class="nav-link mx-2" runat="server" href="~/Movies/Home">Movies</a></li>
                 </ul>
                 </div>
             </div>

@@ -12,6 +12,7 @@ namespace BloggingSite.Movies
 {
     public partial class MoviesHome : System.Web.UI.Page
     {
+        int totalCount = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
@@ -24,7 +25,57 @@ namespace BloggingSite.Movies
             sda.Fill(dt);
             RepBlogDetails.DataSource = dt;
             RepBlogDetails.DataBind();
+            totalCount = dt.Rows.Count;
+            bindData();
             sqlconn.Close();
+        }
+
+        private void bindData()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["Myconnection"].ToString();
+            SqlConnection connection = new SqlConnection(connectionString);
+            DataSet ds = new DataSet();
+            String sql = "select * from [dbo].[blog] where Bcategory='Movies' order by Bposteddate DESC";
+            int val = Convert.ToInt16(txtHidden.Value);
+            if (val <= 0)
+                val = 0;
+            connection.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+            adapter.Fill(ds, val, 5, "blog");
+
+            Console.WriteLine(totalCount);
+            connection.Close();
+            RepBlogDetails.DataSource = ds;
+            RepBlogDetails.DataBind();
+
+            if (val <= 0)
+            {
+                lnkBtnPrev.Visible = false;
+                lnkBtnNext.Visible = true;
+            }
+
+            if (val >= 5)
+            {
+                lnkBtnPrev.Visible = true;
+                lnkBtnNext.Visible = true;
+            }
+
+            if ((val + 5) >= totalCount)
+            {
+                lnkBtnNext.Visible = false;
+            }
+        }
+
+        protected void lnkBtnPrev_Click(object sender, EventArgs e)
+        {
+            txtHidden.Value = Convert.ToString(Convert.ToInt16(txtHidden.Value) - 5);
+            bindData();
+        }
+
+        protected void lnkBtnNext_Click(object sender, EventArgs e)
+        {
+            txtHidden.Value = Convert.ToString(Convert.ToInt16(txtHidden.Value) + 5);
+            bindData();
         }
 
         protected void RepBlogDetails_ItemCommand(object source, RepeaterCommandEventArgs e)

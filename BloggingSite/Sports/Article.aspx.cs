@@ -21,7 +21,9 @@ namespace BloggingSite.Sports
             SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
             SqlDataReader reader = sqlcomm.ExecuteReader();
             reader.Read();
-            IdLbl.Text = reader["Bfullblog"].ToString();
+            //IdLbl.Text = reader["Bfullblog"].ToString();
+            Label1.Text = reader["Btitle"].ToString();
+            Label2.Text = reader["Bfullblog"].ToString();
             sqlconn.Close();
         }
     }
