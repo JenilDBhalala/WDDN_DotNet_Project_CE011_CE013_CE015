@@ -18,6 +18,8 @@ namespace BloggingSite
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             RouteTable.Routes.MapPageRoute("AdminLogin", "admin/login", "~/Admin/AdminLogin.aspx");
             RouteTable.Routes.MapPageRoute("ShowArticle", "{slug}", "~/Article.aspx");
+            RouteTable.Routes.MapPageRoute("EditBlog", "edit/{slug}", "~/Admin/Edit.aspx");
+            RouteTable.Routes.MapPageRoute("DeleteBlog", "delete/{slug}", "~/Admin/Delete.aspx");
         }
     }
 }

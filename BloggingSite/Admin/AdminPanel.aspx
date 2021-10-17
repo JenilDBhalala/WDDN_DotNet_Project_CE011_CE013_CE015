@@ -40,6 +40,8 @@
                 </div>
                 <div class="form-group px-5">
                     <asp:Button ID="SubmitButton" class="btn btn-primary" runat="server" Text="Save" OnClick="SubmitButton_Click" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button2" class="btn btn-primary" runat="server" Text="Manage Blogs" OnClick="Manage_Blog_Click" />
                 </div>
             </div>
         </div>

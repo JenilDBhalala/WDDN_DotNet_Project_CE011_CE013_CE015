@@ -12,6 +12,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+        
     </style>
 
     <asp:PlaceHolder runat="server">
@@ -22,6 +23,21 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <script type="text/javascript" src="/Scripts/myscript.js"></script>
     
+    <script>
+        function updateConfirm()
+        {
+            var confirm_value = document.createElement("INPUT");
+            confirm_value.type = "hidden";
+            confirm_value.name = "confirm_value";
+            if (confirm("Are You Sure to Update Blog ??")) {
+                confirm_value.value = "Yes";
+            }
+            else {
+                confirm_value.value = "No";
+            }
+            document.forms[0].appendChild(confirm_value);
+        }
+    </script>
 </head>
 
 <body>
@@ -51,7 +67,7 @@
         <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded">
             <div class="container-fluid">
 
-                <a class="navbar-brand mx-4" runat="server" href="~/">Blog Scope</a>
+                <a class="navbar-brand mx-4"  runat="server" href="~/">Blog Scope</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

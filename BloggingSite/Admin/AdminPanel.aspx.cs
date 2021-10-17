@@ -17,9 +17,9 @@ namespace BloggingSite.Admin
         {
             if (!Page.IsPostBack)
             {
-                //    LblBlogPostedDate.Text = DateTime.Now.ToString();
-                //    ListBlogCat.Items.Insert(0, "-- Select Category --");
-                //
+                LblBlogPostedDate.Text = DateTime.Now.ToString();
+                ListBlogCat.Items.Insert(0, "-- Select Category --");
+                
             }
         }
 
@@ -39,6 +39,11 @@ namespace BloggingSite.Admin
             sqlcomm.ExecuteNonQuery();
             sqlconn.Close();
             Response.Redirect("~/Admin/AdminPanel.aspx");
+        }
+
+        protected void Manage_Blog_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Manage.aspx");
         }
     }
 }
