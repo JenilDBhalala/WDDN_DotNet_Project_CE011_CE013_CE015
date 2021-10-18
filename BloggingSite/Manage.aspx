@@ -3,7 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <br />
     <br />
+
     <div class="container">
+
         <table class="table table-striped table-hover">
             <thead>
                 <tr>

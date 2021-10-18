@@ -6,7 +6,6 @@
             <div class="mytemplate col-md-8 shadow p-3 mb-5 bg-white rounded">
 
                 <h3 id="template-title">Latest Articles</h3>
-
                 <div>
                     <asp:Repeater ID="RepBlogDetails" runat="server" OnItemCommand="RepBlogDetails_ItemCommand">
                         <ItemTemplate>
@@ -35,6 +34,8 @@
                 </div>
             </div>
 
+
+
             <div class="rightside col-md-4">
                 <div id="rightside-tag" class="shadow p-3 mb-5 bg-white rounded">
                     <h3 class="rightside-title">Tags</h3>
@@ -57,7 +58,7 @@
                     <div class="button-group">
                         <asp:Repeater ID="MostViewdBlog" runat="server">
                             <ItemTemplate>
-                                <div style="margin: 12px 0;font-size: 20px">
+                                <div style="margin: 12px 0;font-size: 16px">
                                     <asp:HyperLink ID="HyperLink1" NavigateUrl='<%#Eval("Burl")%>' runat="server"><%#Eval("Btitle")%></asp:HyperLink>
                                 </div>
                             </ItemTemplate>

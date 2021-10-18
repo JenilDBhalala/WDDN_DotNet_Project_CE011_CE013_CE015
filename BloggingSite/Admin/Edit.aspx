@@ -12,6 +12,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="Button2" class="btn btn-light" runat="server" Text="Cancel" OnClick="Button2_Click" style="margin-left: 14" />
             </div>
+            <div></div>
             <div class="mytemplate col-md-10 shadow p-5 mb-7 bg-white rounded">
                 <script src="../Scripts/ckeditor/ckeditor.js"></script>
                 <script src="../Scripts/ckfinder/ckfinder.js"></script>

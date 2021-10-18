@@ -5,6 +5,7 @@
     <div class="container">
         <br />
         <br />
+
         <div class="row">
             <div id="confirmMessage" runat="server" class="col-md-10 alert alert-secondary">
                 <strong>Do you want to delete blog?</strong><p></p><br />
